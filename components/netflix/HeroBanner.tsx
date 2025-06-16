@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Play, Info, Volume2, VolumeX } from 'lucide-react';
 import { getFeaturedContent } from '@/lib/data/content';

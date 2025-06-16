@@ -314,9 +314,10 @@ export default function VideoPlayer({ content, startTime = null }: VideoPlayerPr
   };
 
   // Deprecated skipTime function (kept for backward compatibility)
-  const skipTime = (seconds: number) => {
-    seekRelative(seconds);
-  };
+  // const skipTime = (seconds: number) => {
+  //   seekRelative(seconds);
+
+  // };
 
   const formatTime = (time: number) => {
     if (isNaN(time)) return '0:00';

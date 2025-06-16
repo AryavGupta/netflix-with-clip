@@ -79,6 +79,7 @@ export default function SocialOverlay({ content, currentTime, onClose }: SocialO
       
       if (clipId) {
         setCreatedClipId(clipId);
+        console.log("Clip id", createdClipId);
         setStep('success');
         
         // Log for debugging
@@ -437,7 +438,7 @@ export default function SocialOverlay({ content, currentTime, onClose }: SocialO
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center space-x-2">
             <div className="flex space-x-1">
-              {['clip', 'reaction', 'share'].map((stepName, index) => {
+              {['clip', 'reaction', 'share'].map((stepName) => {
                 const currentStepIndex = ['clip', 'reaction', 'share', 'success'].indexOf(step);
                 const stepIndex = ['clip', 'reaction', 'share'].indexOf(stepName);
                 

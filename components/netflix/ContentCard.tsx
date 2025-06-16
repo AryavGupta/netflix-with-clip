@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Play, Plus, ThumbsUp, ThumbsDown, ChevronDown, Clock } from 'lucide-react';
+import { Play, Plus, ThumbsUp, ThumbsDown, ChevronDown } from 'lucide-react';
 import type { Content } from '@/lib/data/content';
 
 interface ContentCardProps {
@@ -33,15 +33,15 @@ export default function ContentCard({
 
   const config = sizeConfig[size];
 
-  const formatDuration = (seconds: number) => {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
+  // const formatDuration = (seconds: number) => {
+  //   const hours = Math.floor(seconds / 3600);
+  //   const minutes = Math.floor((seconds % 3600) / 60);
     
-    if (hours > 0) {
-      return `${hours}h ${minutes}m`;
-    }
-    return `${minutes}m`;
-  };
+  //   if (hours > 0) {
+  //     return `${hours}h ${minutes}m`;
+  //   }
+  //   return `${minutes}m`;
+  // };
 
   const handlePlay = (e: React.MouseEvent) => {
     e.stopPropagation();

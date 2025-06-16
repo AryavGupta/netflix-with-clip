@@ -14,7 +14,7 @@ interface AuthState {
 
 export const useAuthStore = create<AuthState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       user: null,
       isLoggedIn: false,
       isLoading: false,
@@ -45,6 +45,7 @@ export const useAuthStore = create<AuthState>()(
             return false;
           }
         } catch (error) {
+          console.log(error);
           set({ 
             error: 'Login failed. Please try again.',
             isLoading: false 

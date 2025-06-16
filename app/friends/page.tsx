@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/lib/stores/auth';
 import { useClipsStore, type SharedClip } from '@/lib/stores/clips';
-import { DEMO_USERS } from '@/lib/data/users';
+// import { DEMO_USERS } from '@/lib/data/users';
 import NetflixHeader from '@/components/netflix/Header';
 import { Play, Clock, MessageSquare, Users, Share2, Trash2 } from 'lucide-react';
 
