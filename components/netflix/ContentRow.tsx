@@ -19,8 +19,8 @@ interface ContentRowProps {
 export default function ContentRow({ 
   title, 
   items, 
-  size = 'medium',
-  showNumbers = false,
+  // size = 'medium',
+  // showNumbers = false,
   showProgress = false,
   isTop10 = false,
   seeMoreLink
@@ -169,6 +169,8 @@ export default function ContentRow({
 
   // Top 10 special rendering with large numbers
   if (isTop10) {
+    console.log(isHovered);
+    console.log(hoveredItem);
     return (
       <div className="mb-12 content-row">
         <div className="flex items-center justify-between px-8 md:px-16 mb-6">
