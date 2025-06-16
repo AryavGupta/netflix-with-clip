@@ -58,9 +58,26 @@ export default function LoginPage() {
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      {/* Netflix Logo */}
+      {/* Netflix Logo - Changed to Image */}
       <div className="absolute top-8 left-8 z-10">
-        <h1 className="text-3xl font-bold text-netflix-red">NETFLIX</h1>
+        <button 
+          onClick={() => router.push('/')}
+          className="hover:opacity-80 transition-opacity"
+        >
+          <img 
+            src="https://firestories.s3.ap-south-1.amazonaws.com/ott_icons/netflix_transparent.png"
+            alt="Netflix"
+            className="h-10 w-auto"
+            onError={(e) => {
+              // Fallback to text if image fails to load
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              target.insertAdjacentHTML('afterend', 
+                '<span class="text-3xl font-bold text-netflix-red">NETFLIX</span>'
+              );
+            }}
+          />
+        </button>
       </div>
 
       {/* Login Form */}

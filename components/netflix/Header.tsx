@@ -43,16 +43,24 @@ export default function NetflixHeader() {
       <div className="flex items-center justify-between px-4 py-4 md:px-12">
         {/* Left side - Logo and Navigation */}
         <div className="flex items-center space-x-8">
-          {/* Netflix Logo - Exact styling */}
+          {/* Netflix Logo - Changed to Image */}
           <button 
             onClick={() => router.push('/browse')}
-            className="text-netflix-red text-3xl font-black tracking-tight hover:opacity-80 transition-opacity"
-            style={{ 
-              fontFamily: 'Netflix Sans, Helvetica Neue, Helvetica, Arial, sans-serif',
-              letterSpacing: '-0.5px'
-            }}
+            className="hover:opacity-80 transition-opacity"
           >
-            NETFLIX
+            <img 
+              src="https://firestories.s3.ap-south-1.amazonaws.com/ott_icons/netflix_transparent.png"
+              alt="Netflix"
+              className="h-8 w-auto"
+              onError={(e) => {
+                // Fallback to text if image fails to load
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                target.insertAdjacentHTML('afterend', 
+                  '<span class="text-netflix-red text-3xl font-black tracking-tight" style="font-family: Netflix Sans, Helvetica Neue, Helvetica, Arial, sans-serif; letter-spacing: -0.5px;">NETFLIX</span>'
+                );
+              }}
+            />
           </button>
           
           {/* Navigation Menu - Exact Netflix layout */}
