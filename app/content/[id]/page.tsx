@@ -101,7 +101,7 @@ export default function ContentDetailsPage() {
             {error || 'Content Not Found'}
           </h1>
           <p className="text-gray-400 mb-6">
-            Sorry, we couldn't find the content you're looking for.
+            Sorry, we couldn&apos;t find the content you&apos;re looking for.
           </p>
           <button
             onClick={() => router.push('/browse')}

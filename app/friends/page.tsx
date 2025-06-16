@@ -212,7 +212,7 @@ export default function FriendsPage() {
                 <div className="text-center py-12">
                   <Users className="h-16 w-16 text-gray-600 mx-auto mb-4" />
                   <h3 className="text-xl font-medium text-gray-300 mb-2">No clips received yet</h3>
-                  <p className="text-gray-500">When friends share clips with you, they'll appear here</p>
+                  <p className="text-gray-500">When friends share clips with you, they&apos;ll appear here</p>
                 </div>
               ) : (
                 receivedClips.map(clip => (

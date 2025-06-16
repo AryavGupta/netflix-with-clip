@@ -326,7 +326,7 @@ export default function SocialOverlay({ content, currentTime, onClose }: SocialO
 
       {userFriends.length === 0 ? (
         <div className="text-center py-8">
-          <p className="text-gray-400 mb-4">You haven't added any friends yet</p>
+          <p className="text-gray-400 mb-4">You haven&apos;t added any friends yet</p>
           <button className="text-netflix-red hover:text-red-400 underline">
             Find Friends
           </button>
@@ -426,7 +426,7 @@ export default function SocialOverlay({ content, currentTime, onClose }: SocialO
       </div>
       
       <div className="text-sm text-gray-400">
-        This clip will appear in your friends' FireTV feeds
+        This clip will appear in your friends&apos; FireTV feeds
       </div>
     </div>
   );
